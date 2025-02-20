@@ -3,11 +3,11 @@ from fastapi import FastAPI, Header, HTTPException
 
 app = FastAPI()
 
-# Leer la API Key desde la variable de entorno API_KEY
+# Leer la API Key desde la variable de entorno
 API_KEY = os.getenv("API_KEY", "default_key")
 
-# (Opcional) Imprimir la clave que se está usando, para verificar en logs
-print("===== DEPURACIÓN: La API_KEY en uso es:", API_KEY)
+# Imprimir la API Key en uso (solo para depuración)
+print(f"🔍 DEPURACIÓN: La API_KEY en uso es: {API_KEY}")
 
 @app.get("/")
 def read_root(x_api_key: str = Header(None)):
