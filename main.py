@@ -9,6 +9,12 @@ API_KEY = os.getenv("API_KEY", "default_key").strip()
 # Imprimir API Key almacenada en logs
 print(f"🔍 DEPURACIÓN: API_KEY almacenada -> '{API_KEY}'")
 
+
+@app.get("/ping")
+def health_check():
+    return {"status": "OK", "message": "API is running successfully"}
+
+
 @app.get("/")
 def read_root(x_api_key: str = Header(..., alias="x-api-key")):
     print(f"🔍 DEPURACIÓN: API Key recibida -> '{x_api_key}'")
