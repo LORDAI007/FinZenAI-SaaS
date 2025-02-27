@@ -1,6 +1,8 @@
 import os
 from fastapi import FastAPI, Header, HTTPException
 
+# Este es un cambio menor para forzar el redeploy en Vercel
+
 app = FastAPI()
 
 # Leer API Key desde las variables de entorno
