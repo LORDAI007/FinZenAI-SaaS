@@ -5,25 +5,25 @@ app = FastAPI()
 
 # Leer API Key desde las variables de entorno
 API_KEY = os.getenv("API_KEY", "default_key").strip()
+print(f"🔍 DEPURACIÓN: API_KEY obtenida desde Vercel -> '{API_KEY}'")  # Depuración para verificar la API Key obtenida
 
-# Imprimir API Key almacenada en logs
-print(f"🔍 DEPURACIÓN: API_KEY almacenada -> '{API_KEY}'")
-
-
+# Endpoint de prueba
 @app.get("/ping")
 def health_check():
     return {"status": "OK", "message": "API is running successfully"}
 
-
+# Endpoint protegido con API Key
 @app.get("/")
-def read_root(x_api_key: str = Header(..., alias="x-api-key")):
+def read_root(x_api_key: str = Header(...)):  # Eliminamos alias innecesario
+
+    # Logs de depuración
     print(f"🔍 DEPURACIÓN: API Key recibida -> '{x_api_key}'")
     print(f"🔍 DEPURACIÓN: API_KEY almacenada -> '{API_KEY}'")
-    print(f"🔍 Longitud x_api_key: {len(x_api_key)}, API_KEY: {len(API_KEY)}")
-    print(f"🔍 x_api_key en bytes: {list(x_api_key.encode())}")
-    print(f"🔍 API_KEY en bytes: {list(API_KEY.encode())}")
+    print(f"📏 Longitud API Key recibida: {len(x_api_key)}, API_KEY esperada: {len(API_KEY)}")
 
+    # Verificación de API Key
     if x_api_key.strip() != API_KEY:
         raise HTTPException(status_code=401, detail="❌ Unauthorized: Invalid API Key")
-    
-    return {"message": "✅ API deployed successfully on Render with Authentication!"}
+
+    return {"message": "✅ API deployed successfully!"}
+
