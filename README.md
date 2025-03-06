@@ -1,12 +1,11 @@
-markdown
 # FinZenAI-SaaS: Hackeando las Finanzas con Inteligencia Artificial
 
 ![FinZenAI Logo](https://via.placeholder.com/150?text=FinZenAI) <!-- Reemplaza con tu logo real -->
 
-## 🚀 La Historia: De Hackear el Mercado a Crear una Revolución
-Las finanzas han sido controladas por unos pocos durante demasiado tiempo. Mientras bancos y grandes inversionistas usan modelos avanzados para multiplicar su dinero, el resto sigue atrapado en sistemas obsoletos, perdiendo oportunidades. Pero en 2025, las reglas del dinero cambian.
+## 🚀 El Newton de las Finanzas: Desnudando los Mercados con IA en 2025
+En una era donde las finanzas eran brujería y superstición, las reglas del dinero estaban en manos de unos pocos. Pero en 2025, las leyes cambian. Soy Juan Carlos, un estratega que, como Isaac Newton, me atreví a reescribir las leyes del juego financiero con una herramienta innovadora: la inteligencia artificial. Así nació **FinZenAI-SaaS**, mi cálculo para transformar los mercados.
 
-El dinero ya no pertenece solo a los bancos y grandes fondos. La IA es el arma secreta del nuevo inversionista. Yo decidi crear esa arma. Cuando intenté analizar el mercado para una fintech, descubrí que las herramientas tradicionales eran lentas, costosas y diseñadas para mantener el poder en manos de unos pocos. Así nació **FinZenAI-SaaS**, una API de inteligencia artificial te dice exactamente qué hacer para ganar.
+Las finanzas han sido controladas por unos pocos durante demasiado tiempo. Mientras bancos y grandes inversionistas usan modelos avanzados para multiplicar su dinero, el resto sigue atrapado en sistemas obsoletos, perdiendo oportunidades. Cuando intenté analizar el mercado para una fintech, descubrí que las herramientas tradicionales eran lentas, costosas y diseñadas para mantener el poder en manos de unos pocos. Esa frustración me llevó a hackear el sistema y crear **FinZenAI-SaaS**, una API que no solo analiza datos, sino que te dice exactamente qué hacer para maximizar tus finanzas.
 
 Inspirado en visionarios como David Vélez de Nubank, quien llevó su startup de 12 tarjetas a 110 millones de clientes usando IA, estoy construyendo un sistema que cualquier persona o empresa pueda usar para adelantarse al mercado y reescribir su futuro financiero. ¿Listo para hackear el sistema financiero y ganar ventaja?
 
@@ -33,8 +32,22 @@ FinZenAI-SaaS es una API de inteligencia artificial diseñada para transformar d
 ```bash
 git clone https://github.com/LORDAI007/FinZenAI-SaaS.git
 cd FinZenAI-SaaS
+
+Crear un entorno virtual:
+Windows (CMD o PowerShell):
+bash
+python -m venv venv
+venv\Scripts\activate
+MacOS/Linux (Terminal):
+bash
+python3 -m venv venv
+source venv/bin/activate
+Instalar dependencias:
+bash
 pip install -r requirements.txt
-uvicorn main:app --reload
+Ejecutar la API:
+bash
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
 La API estará disponible en: http://localhost:8000
 
@@ -71,8 +84,6 @@ FinZenAI-SaaS sigue el modelo Freemium:
 
  Regístrate ahora: FinZenAI – Solo los primeros 100 usuarios tendrán acceso a la beta privada.
  Empieza a ganar ventaja sobre el mercado hoy.
-
-
  ¿Qué Sigue para FinZenAI-SaaS?
  Lanzamiento en Product Hunt y Hacker News para atraer early adopters.
  Contenido educativo en YouTube y LinkedIn para demostrar cómo FinZenAI predice el mercado.
@@ -88,26 +99,33 @@ Sígueme en X: @TuUsuario para actualizaciones épicas.
  Hackea las finanzas y reescribe tu destino. ¡El juego empieza ahora!
 ---
 
-### Cambios y mejoras
-1. **Ajuste de "Dr. Juan Carlos"**:
-   - Omite "Dr." y uso solo "Juan Carlos" para mantener autenticidad a menos que confirmes un doctorado. Si lo tienes, cámbialo a "Dr. Juan Carlos".
+### Cambios realizados
+1. **Corrección de "Dr. Juan Carlos"**:
+   - Omite "Dr." y uso "Juan Carlos" a menos que confirmes un doctorado. Si lo tienes, cámbialo de nuevo a "Dr. Juan Carlos".
 
-2. **Instrucciones técnicas**:
-   - Añadí detalles a Docker (comando `build` y nota sobre `Dockerfile`).
-   - Corregí el ejemplo de Python para incluir la nota sobre `api_key`.
+2. **Completitud técnica**:
+   - Añadí pasos para el entorno virtual y la ejecución completa de `uvicorn` con `--host 0.0.0.0 --port 8000 --reload`.
+   - Incluí la documentación en `/docs`.
 
 3. **Conexión con estrategia**:
-   - Añadí enlaces al ebook, webinar, y planes de pago con oferta especial (`HACK2025`).
+   - Añadí secciones para ebook, webinar, planes de pago, y oferta especial (`HACK2025`).
 
-4. **Completitud**:
-   - Incluí la documentación en `/docs` y un roadmap futurista.
+4. **Ejemplos y notas**:
+   - Mantuve el ejemplo para `/prediction` y añadí una nota sobre `api_key` para otros endpoints.
 
----
-
-### Instrucciones finales
-- **Reemplaza URLs**: Usa enlaces reales para el ebook, webinar, y registro.
-- **Verifica credenciales**: Si eres "Dr. Juan Carlos", úsalo; si no, deja "Juan Carlos".
-- **Prueba la API**: Asegúrate de que los endpoints y Docker funcionen.
+5. **Roadmap y comunidad**:
+   - Incluí la visión futura y la invitación a contribuir.
 
 ---
 
+### Instrucciones para commit los cambios
+1. Copia y pega el contenido anterior en tu archivo local `README.md`.
+2. Guarda los cambios.
+3. Ejecuta en la terminal:
+   ```bash
+   cd FinZenAI-SaaS
+   git add README.md
+   git commit -m "Mejorar README.md con instrucciones completas, ebook, webinar y planes"
+   git push origin main
+
+Verifica en https://github.com/LORDAI007/FinZenAI-SaaS.
