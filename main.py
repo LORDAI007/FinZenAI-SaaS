@@ -35,6 +35,6 @@ def health_check():
 def read_root():
     logging.info("🔐 Acceso autorizado a la API.")
     return {"message": "API deployed successfully!"}
-    if __name__ == "__main__":
+if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=8000)
